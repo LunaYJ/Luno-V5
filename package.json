@@ -1,86 +1,101 @@
 {
-    "name": "luno-5",
-    "description": "a Ghost Theme, Luno V5, new Luno Theme for Ghost V5",
-    "demo": "https://lunashu.org/",
-    "version": "1.0.0",
-    "engines": {
-        "ghost": ">=5.0.0"
-    },
-    "license": "MIT",
-    "screenshots": {
-        "desktop": "assets/screenshot-desktop.jpg"
-    },
-    "scripts": {
-        "dev": "rollup -c --environment BUILD:development -w",
-        "build": "rollup -c --environment BUILD:production",
-        "zip": "npm run build && bestzip $npm_package_name.zip assets/* partials/* members/* *.hbs package.json",
-        "test": "npx gscan .",
-        "pretest": "npm run build"
-    },
-    "author": {
-        "name": "Luna Shu",
-        "email": "me@lunashu.org",
-        "url": "https://lunashu.org/"
-    },
-    "gpm": {
-        "type": "theme",
-        "categories": [
-            "Minimal",
-            "Magazine"
-        ]
-    },
-    "keywords": [
-        "ghost",
-        "theme",
-        "ghost-theme"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/LunaYJ/Luno-V5.git"
-    },
-    "bugs": "https://github.com/LunaYJ/Luno-V5/issues",
-    "contributors": "https://github.com/LunaYJ/Luno-V5/graphs/contributors",
-    "devDependencies": {
-        "@babel/core": "^7.21.0",
-        "@babel/preset-env": "^7.20.2",
-        "@rollup/plugin-babel": "^6.0.3",
-        "@rollup/plugin-commonjs": "^25.0.0",
-        "@rollup/plugin-node-resolve": "^15.0.1",
-        "@rollup/plugin-terser": "^0.4.0",
-        "bestzip": "^2.2.1",
-        "postcss": "^8.4.24",
-        "postcss-import": "^15.1.0",
-        "postcss-preset-env": "^8.0.1",
-        "rollup": "^3.18.0",
-        "rollup-plugin-livereload": "^2.0.5",
-        "rollup-plugin-postcss": "^4.0.2"
-    },
-    "browserslist": [
-        "defaults"
-    ],
-    "config": {
-        "card_assets": true,
-        "posts_per_page": 15,
-        "image_sizes": {
-            "xxs": {
-                "width": 30
-            },
-            "xs": {
-                "width": 100
-            },
-            "s": {
-                "width": 300
-            },
-            "m": {
-                "width": 600
-            },
-            "l": {
-                "width": 1200
-            },
-            "xl": {
-                "width": 2000
-            }
-        }
-    },
-    "type": "module"
+  "name": "luno-5",
+  "description": "a Ghost Theme, Luno V5, new Luno Theme for Ghost V5",
+  "demo": "https://lunashu.org/",
+  "version": "1.0.0",
+  "engines": {
+    "ghost": ">=5.0.0"
+  },
+  "license": "MIT",
+  "screenshots": {
+    "desktop": "assets/screenshot-desktop.jpg"
+  },
+  "scripts": {
+    "dev": "rollup -c --environment BUILD:development -w",
+    "build": "rollup -c --environment BUILD:production",
+    "zip": "npm run build && bestzip $npm_package_name.zip assets/* partials/* members/* *.hbs package.json",
+    "test": "npx gscan .",
+    "pretest": "npm run build",
+    "prepare": "husky"
+  },
+  "author": {
+    "name": "Luna Shu",
+    "email": "me@lunashu.org",
+    "url": "https://lunashu.org/"
+  },
+  "gpm": {
+    "type": "theme",
+    "categories": [
+      "Minimal",
+      "Magazine"
+    ]
+  },
+  "keywords": [
+    "ghost",
+    "theme",
+    "ghost-theme"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LunaYJ/Luno-V5.git"
+  },
+  "bugs": "https://github.com/LunaYJ/Luno-V5/issues",
+  "contributors": "https://github.com/LunaYJ/Luno-V5/graphs/contributors",
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/eslint-parser": "^7.25.1",
+    "@babel/preset-env": "^7.20.2",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-eslint": "^9.0.5",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-terser": "^0.4.0",
+    "bestzip": "^2.2.1",
+    "eslint": "^8.57.0",
+    "eslint-config-alloy": "^5.1.2",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "husky": "^9.1.4",
+    "lint-staged": "^15.2.7",
+    "postcss": "^8.4.24",
+    "postcss-import": "^15.1.0",
+    "postcss-preset-env": "^8.0.1",
+    "prettier": "^3.3.3",
+    "rollup": "^3.18.0",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-postcss": "^4.0.2"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "config": {
+    "card_assets": true,
+    "posts_per_page": 15,
+    "image_sizes": {
+      "xxs": {
+        "width": 30
+      },
+      "xs": {
+        "width": 100
+      },
+      "s": {
+        "width": 300
+      },
+      "m": {
+        "width": 600
+      },
+      "l": {
+        "width": 1200
+      },
+      "xl": {
+        "width": 2000
+      }
+    }
+  },
+  "type": "module",
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ]
+  }
 }

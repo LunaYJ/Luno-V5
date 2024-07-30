@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo '---- Hi Husky ----'
+echo '<--- Lint Start --->'
+npx lint-staged
+echo '<--- Lint End --->'
+echo '=================='
+echo '<--- git add Start --->'
+git add
+echo '<--- git add End --->'
