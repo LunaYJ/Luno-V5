@@ -1,7 +1,7 @@
 {
-    "name": "ghost-starter-theme",
-    "description": "A starter theme for Ghost theme development",
-    "demo": "https://starter.ghost.io",
+    "name": "Luna-V5",
+    "description": "a Ghost Theme, Luno V5, new Luno Theme for Ghost V5",
+    "demo": "https://lunashu.org/",
     "version": "1.0.0",
     "engines": {
         "ghost": ">=5.0.0"
@@ -18,9 +18,9 @@
         "pretest": "npm run build"
     },
     "author": {
-        "name": "Ghost Foundation",
-        "email": "hello@ghost.org",
-        "url": "https://ghost.org"
+        "name": "Luna Shu",
+        "email": "me@lunashu.org",
+        "url": "https://lunashu.org/"
     },
     "gpm": {
         "type": "theme",
@@ -36,10 +36,10 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/TryGhost/Starter.git"
+        "url": "https://github.com/LunaYJ/Luno-V5.git"
     },
-    "bugs": "https://github.com/TryGhost/Starter/issues",
-    "contributors": "https://github.com/TryGhost/Starter/graphs/contributors",
+    "bugs": "https://github.com/LunaYJ/Luno-V5/issues",
+    "contributors": "https://github.com/LunaYJ/Luno-V5/graphs/contributors",
     "devDependencies": {
         "@babel/core": "^7.21.0",
         "@babel/preset-env": "^7.20.2",
