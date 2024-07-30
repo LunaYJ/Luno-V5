@@ -101,5 +101,10 @@
     "*.{js,jsx,ts,tsx}": [
       "eslint --fix"
     ]
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.6.0",
+    "@taufik-nurrohman/highlight.ln.js": "^2.0.0",
+    "highlight.js": "^11.10.0"
   }
 }

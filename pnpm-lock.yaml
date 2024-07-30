@@ -7,6 +7,16 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@fortawesome/fontawesome-free':
+        specifier: ^6.6.0
+        version: 6.6.0
+      '@taufik-nurrohman/highlight.ln.js':
+        specifier: ^2.0.0
+        version: 2.0.0
+      highlight.js:
+        specifier: ^11.10.0
+        version: 11.10.0
     devDependencies:
       '@babel/core':
         specifier: ^7.25.2
@@ -883,6 +893,10 @@ packages:
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
+  '@fortawesome/fontawesome-free@6.6.0':
+    resolution: {integrity: sha512-60G28ke/sXdtS9KZCpZSHHkCbdsOGEhIUGlwq6yhY74UpTiToIh8np7A8yphhM4BWsvNFtIvLpi4co+h9Mr9Ow==}
+    engines: {node: '>=6'}
+
   '@humanwhocodes/config-array@0.11.14':
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
     engines: {node: '>=10.10.0'}
@@ -993,6 +1007,24 @@ packages:
     peerDependenciesMeta:
       rollup:
         optional: true
+
+  '@taufik-nurrohman/document@1.0.1':
+    resolution: {integrity: sha512-RJPRCn0hfnQX2nsxgAhDH+Yqkw0sv8n/GG6vegdU5O1PFZt57nn1aaqesjRRHxAZuuB1KHnBXY6O+WQVx5zwyQ==}
+
+  '@taufik-nurrohman/from@1.1.0':
+    resolution: {integrity: sha512-MkKLkg33ILPpYNyhyPeoBGlvR3ShlWbzNCdwm+J7IQztso5mVyc2iamLlKtjzjFQ4yUTeMWwyTktELK2hDTcSQ==}
+
+  '@taufik-nurrohman/has@1.0.0':
+    resolution: {integrity: sha512-eHr/hJhcChJashj8qX1cTg8lxpcQxpu3cF8pD5AZg1Abap/U6a70VJv9JQuzJO92L1X7XS5c7fA/IxEbxulORg==}
+
+  '@taufik-nurrohman/highlight.ln.js@2.0.0':
+    resolution: {integrity: sha512-DtX8JuvlzOPnQ3gxgBnVQP6w07q/3yMv8sJbnUBpdwXXzZ7Rdv2cjpKe0nT5G9k2AvdxYCUzh3mUMu8EktUMeg==}
+
+  '@taufik-nurrohman/is@1.0.1':
+    resolution: {integrity: sha512-rHUkK4PpTVCYUrS4JldHZ05WZTzCnv7pgZpvRv/25OBeTgIuOpnNiKpS3NJXRXmBK9uKkMNwQV+BqGRypvfxUw==}
+
+  '@taufik-nurrohman/to@1.1.0':
+    resolution: {integrity: sha512-GGT4RS7CXcPqeFIOv6sH17aEvPKCy+Rqxv+xv8EwMkeB3YrxFzG0rtFU0I605jpF7Gge+koxQ+g1yG5gRAaeKw==}
 
   '@trysound/sax@0.2.0':
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
@@ -1609,6 +1641,10 @@ packages:
   hasown@2.0.2:
     resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==}
     engines: {node: '>= 0.4'}
+
+  highlight.js@11.10.0:
+    resolution: {integrity: sha512-SYVnVFswQER+zu1laSya563s+F8VDGt7o35d4utbamowvUNLLMovFqwCLSocpZTz3MgaSRA1IbqRWZv97dtErQ==}
+    engines: {node: '>=12.0.0'}
 
   htmlparser2@9.1.0:
     resolution: {integrity: sha512-5zfg6mHUoaer/97TxnGpxmbR7zJtPwIYFMZ/H5ucTlPZhKvtum05yiPK3Mgai3a0DyVxv7qYqoweaEd2nrYQzQ==}
@@ -3702,6 +3738,8 @@ snapshots:
 
   '@eslint/js@8.57.0': {}
 
+  '@fortawesome/fontawesome-free@6.6.0': {}
+
   '@humanwhocodes/config-array@0.11.14':
     dependencies:
       '@humanwhocodes/object-schema': 2.0.3
@@ -3810,6 +3848,32 @@ snapshots:
       picomatch: 2.3.1
     optionalDependencies:
       rollup: 3.29.4
+
+  '@taufik-nurrohman/document@1.0.1':
+    dependencies:
+      '@taufik-nurrohman/from': 1.1.0
+      '@taufik-nurrohman/is': 1.0.1
+      '@taufik-nurrohman/to': 1.1.0
+
+  '@taufik-nurrohman/from@1.1.0':
+    dependencies:
+      '@taufik-nurrohman/has': 1.0.0
+      '@taufik-nurrohman/is': 1.0.1
+      '@taufik-nurrohman/to': 1.1.0
+
+  '@taufik-nurrohman/has@1.0.0': {}
+
+  '@taufik-nurrohman/highlight.ln.js@2.0.0':
+    dependencies:
+      '@taufik-nurrohman/document': 1.0.1
+      '@taufik-nurrohman/is': 1.0.1
+
+  '@taufik-nurrohman/is@1.0.1': {}
+
+  '@taufik-nurrohman/to@1.1.0':
+    dependencies:
+      '@taufik-nurrohman/from': 1.1.0
+      '@taufik-nurrohman/is': 1.0.1
 
   '@trysound/sax@0.2.0': {}
 
@@ -4464,6 +4528,8 @@ snapshots:
   hasown@2.0.2:
     dependencies:
       function-bind: 1.1.2
+
+  highlight.js@11.10.0: {}
 
   htmlparser2@9.1.0:
     dependencies:
