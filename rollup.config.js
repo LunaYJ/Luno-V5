@@ -19,6 +19,7 @@ import postcssPresetEnv from 'postcss-preset-env';
 // Development: Enables a livereload server that watches for changes to CSS, JS, and Handlbars files
 import { resolve } from 'path';
 import livereload from 'rollup-plugin-livereload';
+import autoprefixer from 'autoprefixer';
 
 // Rollup configuration
 export default defineConfig({
@@ -30,14 +31,16 @@ export default defineConfig({
     plugins: [terser()],
   },
   plugins: [
-    eslint(),
+    eslint({
+      include: ['*.js'],
+    }),
     commonjs(),
     nodeResolve(),
     babel({ babelHelpers: 'bundled' }),
     postcss({
       extract: true,
       sourceMap: true,
-      plugins: [atImport(), postcssPresetEnv({})],
+      plugins: [atImport(), postcssPresetEnv({}), autoprefixer()],
       minimize: true,
     }),
     process.env.BUILD !== 'production' &&
