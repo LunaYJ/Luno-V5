@@ -32,7 +32,7 @@ export default defineConfig({
   },
   plugins: [
     eslint({
-      include: ['*.js'],
+      include: ['*.js', '*.hbs'],
     }),
     commonjs(),
     nodeResolve(),
